@@ -2,13 +2,16 @@
 slim terminal search and download tool for sonatype-nexus3 in go
 
 ### Login
-![login-example](https://github.com/devcblack/snx/assets/94953425/f817efdf-f888-40f9-b3a5-5542e5505a7a)
+![login-example](https://github.com/devcblack/snx/assets/94953425/8e57df3c-ade6-4c31-af33-7554759f72a5)
+
 ### Search
-![search-example](https://github.com/devcblack/snx/assets/94953425/7ba0afa4-f7f2-4725-88be-4cba5914524b)
+![search-example](https://github.com/devcblack/snx/assets/94953425/5e0f2411-ef98-4c82-b44b-a8f87e838205)
+
 ### Component-View
-![component-view-example](https://github.com/devcblack/snx/assets/94953425/59b3e9a3-0325-4bca-9c2d-09de0214e6c3)
+![component-view-example](https://github.com/devcblack/snx/assets/94953425/d808d8b8-8a0f-46a4-9461-f570d510705a)
+
 ### Asset-Download
-![asset-download-example](https://github.com/devcblack/snx/assets/94953425/b4afd2bf-77e3-45bc-bc0a-76f120b2e54c)
+![asset-download-example](https://github.com/devcblack/snx/assets/94953425/a3cb3ef4-3529-4a5a-be1a-d9af9afd1858)
 
 
 # Installation
