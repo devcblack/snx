@@ -17,7 +17,7 @@ slim terminal search and download tool for sonatype-nexus3 in go
 # Installation
 ### Clone Repository
 ```
-git clone git@github.com:devcblack/snx.git
+git clone https://github.com/devcblack/snx.git
 cd snx
 ```
 ### Enable Locale Module
