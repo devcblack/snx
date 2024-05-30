@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"strconv"
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
@@ -229,7 +230,7 @@ if err != nil {
 	return
 }
 
-headerlist := []string {"DownloadURL", "Path", "ID", "Repository", "Format"}
+headerlist := []string {"DownloadURL", "Path", "ID", "Repository", "Format", "LastModified", "LastDownloaded", "Uploader", "UploaderIP", "FileSize", "BlobCreated" }
 for index, header := range headerlist {
 	var cell = tview.NewTableCell(header)
 	cell.SetTextColor(tcell.ColorYellowGreen)
@@ -243,6 +244,15 @@ for index, asset := range data.Items[row].Assets {
 	ui.Assets.Table.SetCell(index, 2, tview.NewTableCell(asset.ID)).SetSelectable(true, false)
 	ui.Assets.Table.SetCell(index, 3, tview.NewTableCell(asset.Repository)).SetSelectable(true, false)
 	ui.Assets.Table.SetCell(index, 4, tview.NewTableCell(asset.Format)).SetSelectable(true, false)
+	ui.Assets.Table.SetCell(index, 5, tview.NewTableCell(asset.LastModified.String())).SetSelectable(true, false)
+	ui.Assets.Table.SetCell(index, 6, tview.NewTableCell(asset.LastDownloaded.String())).SetSelectable(true, false)
+	ui.Assets.Table.SetCell(index, 7, tview.NewTableCell(asset.Uploader)).SetSelectable(true, false)
+	ui.Assets.Table.SetCell(index, 8, tview.NewTableCell(asset.UploaderIP)).SetSelectable(true, false)
+	ui.Assets.Table.SetCell(index, 9, tview.NewTableCell(strconv.Itoa(asset.FileSize))).SetSelectable(true, false)
+	ui.Assets.Table.SetCell(index, 10, tview.NewTableCell(asset.BlobCreated.String())).SetSelectable(true, false)
+
+
+
 }
 
 ui.App.SetRoot(ui.Assets.Flex, true)
